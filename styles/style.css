@@ -1,0 +1,210 @@
+/* Temporaire
+img{
+    width:100px;
+    height:100px;
+
+}
+ */
+header {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+header img {
+  width: 50%;
+}
+
+i {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* Section impaire */
+main section:nth-child(odd) {
+  background-color: #F6F6F6;
+}
+
+.section__gps {
+  background-color: #EAEAEA;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+  border-top: 3px solid lightgray;
+}
+
+.section__reservation {
+  padding-bottom: 40px;
+}
+
+.buttoncolor {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 20px;
+  height: 40px;
+  padding: 10px;
+  color: white;
+  border: 0;
+}
+
+main section:first-child {
+  text-align: center;
+}
+
+/* Fonctionnement */
+main section:nth-child(2) {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+main section:nth-child(2) h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+main section:nth-child(2) #fonctionnement__container {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  text-align: center;
+}
+main section:nth-child(2) #fonctionnement__container span {
+  background-color: #F6F6F6;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+main section:nth-child(2) #fonctionnement__container span.--couleurprimaire {
+  background-color: #f2eafb;
+}
+main section:nth-child(2) #fonctionnement__container span.--couleurprimaire i:nth-child(2) {
+  color: #9356DC;
+}
+main section:nth-child(2) #fonctionnement__container span:nth-child(n) {
+  align-items: center;
+}
+main section:nth-child(2) #fonctionnement__container span p {
+  margin: 0;
+  font-weight: bolder;
+}
+main section:nth-child(2) #fonctionnement__container span i {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 7.5%;
+}
+main section:nth-child(2) #fonctionnement__container span i:nth-child(1) {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  left: -10px;
+}
+
+/* Restaurant */
+#sectionrestaurant {
+  width: 95%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#sectionrestaurant h2 {
+  margin-bottom: 0;
+}
+#sectionrestaurant h3, #sectionrestaurant p {
+  margin: 0;
+}
+#sectionrestaurant .sectionrestaurant__reservation {
+  width: 100%;
+}
+#sectionrestaurant a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  /*margin-bottom: 20px;*/
+}
+#sectionrestaurant a img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+#sectionrestaurant a div {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+#sectionrestaurant a div div {
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5%;
+}
+#sectionrestaurant a div i {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blockrestaurant__notification {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  height: 28.4px;
+}
+.blockrestaurant__notification p {
+  display: none;
+}
+
+.--new p {
+  display: block;
+  background-color: #99E2D0;
+  color: #1b6150;
+  position: relative;
+  padding: 5px;
+  top: 38.4px;
+  right: 10px;
+}
+
+footer {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-bottom: 20px;
+  background-color: #353535;
+  color: white;
+}
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+footer ul li {
+  padding-bottom: 2.5px;
+}
+footer ul li i {
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+}
+
+#footer__logo {
+  width: 25%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=style.css.map */

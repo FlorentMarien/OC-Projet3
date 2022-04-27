@@ -1,0 +1,205 @@
+/* Temporaire
+img{
+    width:100px;
+    height:100px;
+    
+}
+ */
+$couleurprimaire:#9356DC;
+$couleursecondaire:#FF79DA;
+$couleurtertiaire:#99E2D0;
+
+header{
+    width: 100%;
+    text-align: center;
+    img{
+        width: 50%;
+    }
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+i{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/* Section impaire */
+main section:nth-child(odd){
+    background-color: #F6F6F6;
+}
+.section__gps{
+    background-color:#EAEAEA;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+    border-top: 3px solid lightgray;
+}
+.section__reservation{
+    
+    padding-bottom: 40px;
+}
+.buttoncolor{
+    background: linear-gradient($couleursecondaire,$couleurprimaire);
+    border-radius: 20px;
+    height: 40px;
+    padding: 10px;
+    color: white;
+    border: 0;
+}
+main section:first-child{
+    text-align: center;
+}
+/* Fonctionnement */
+main section:nth-child(2){
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin-top:30px;
+    margin-bottom:40px;
+    h2{
+        margin:0;
+        margin-bottom: 20px;
+    }
+    #fonctionnement__container{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        text-align: center;
+        span{
+            &.--couleurprimaire{
+                background-color: lighten($couleurprimaire, 35);
+                & i:nth-child(2){
+                    color: $couleurprimaire;
+                }
+            }
+            background-color: #F6F6F6;
+            display: flex;
+            width: 100%;
+            height: 60px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            &:nth-child(n){
+                align-items: center;
+            }
+            & p{
+                margin: 0;
+                font-weight: bolder; 
+            }
+            & i{
+                padding: 0;
+                width:20px;
+                height: 20px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 7.5%;
+            }
+            & i:nth-child(1){
+                background-color: $couleurprimaire;
+                color: white;
+                border-radius: 10px;
+                position:relative;
+                left: -10px;
+            }
+        }
+    }
+    
+}
+/* Restaurant */
+#sectionrestaurant{
+    width: 95%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top:20px;
+    padding-bottom:20px;
+    h2{
+        margin-bottom: 0;
+    }
+    h3,p{
+        margin: 0;
+    }
+    .sectionrestaurant__reservation{
+        width: 100%;
+    }
+    & a{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        /*margin-bottom: 20px;*/
+    }
+    & a img{
+        display: block;
+        width: 100%;
+        height:150px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    & a div{
+        display: flex;
+        width: 100%;
+        height:70px;
+        background-color: white;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        div{
+            width:80%;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 5%;
+        }
+        i{
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.blockrestaurant__notification{ 
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    height:28.4px;
+    & p{
+        display: none;
+    }   
+}
+.--new{
+    & p{
+        display: block;
+        background-color: $couleurtertiaire;
+        color: darken($couleurtertiaire, 50);
+        position:relative;
+        padding: 5px;
+        top:38.4px;
+        right: 10px;
+    }
+}
+footer{
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 20px;
+    background-color: #353535;
+    color:white;
+    ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+        li{
+            padding-bottom: 2.5px;
+            i{
+                padding: 0;
+                width: 15px;
+                height: 15px;
+                margin-right: 15px;
+            }
+        }
+    }
+}
+#footer__logo{
+    width: 25%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+}
