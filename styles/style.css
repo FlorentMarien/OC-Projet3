@@ -5,19 +5,46 @@ img{
 
 }
  */
+body {
+  font-family: "Roboto";
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 22.5px;
+  font-weight: bolder;
+}
+
 header {
+  display: flex;
   width: 100%;
+}
+header h2 {
+  /*width: 160px;*/
   text-align: center;
+  width: 50%;
+  height: 30px;
+  margin-left: 25%;
+  font-family: "Shrikhand";
+  font-size: 27.5px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-header img {
-  width: 50%;
+header .header__logoretour {
+  width: 5%;
+  margin-left: 5%;
+  display: none;
 }
-
-i {
-  padding-left: 5px;
-  padding-right: 5px;
+header .header__logoretour.--visible {
+  display: flex;
+  align-items: center;
+}
+header .header__logoretour.--visible + h2 {
+  margin-left: 25%;
 }
 
 /* Section impaire */
@@ -27,20 +54,37 @@ main section:nth-child(odd) {
 
 .section__gps {
   background-color: #EAEAEA;
+  margin-top: 0;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
   border-top: 3px solid lightgray;
+}
+.section__gps i {
+  margin-right: 5%;
 }
 
 .section__reservation {
   padding-bottom: 40px;
 }
+.section__reservation a {
+  display: inline-block;
+}
+.section__reservation h2 {
+  margin-left: 12%;
+  margin-right: 12%;
+}
+.section__reservation p {
+  margin-left: 5%;
+  margin-right: 5%;
+}
 
 .buttoncolor {
+  display: inline-block;
   background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 20px;
-  height: 40px;
+  border-radius: 25px;
   padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   color: white;
   border: 0;
 }
@@ -53,17 +97,16 @@ main section:first-child {
 main section:nth-child(2) {
   padding-left: 2.5%;
   padding-right: 2.5%;
-  margin-top: 30px;
   margin-bottom: 40px;
 }
 main section:nth-child(2) h2 {
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
   margin-bottom: 20px;
 }
 main section:nth-child(2) #fonctionnement__container {
-  width: 95%;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+  width: 97.5%;
+  padding-left: 2.5%;
   text-align: center;
 }
 main section:nth-child(2) #fonctionnement__container span {
@@ -95,14 +138,28 @@ main section:nth-child(2) #fonctionnement__container span i {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #B4B4B4;
+}
+main section:nth-child(2) #fonctionnement__container span p:nth-child(1), main section:nth-child(2) #fonctionnement__container span i {
   margin-right: 7.5%;
 }
-main section:nth-child(2) #fonctionnement__container span i:nth-child(1) {
+main section:nth-child(2) #fonctionnement__container span p:nth-child(3), main section:nth-child(2) #fonctionnement__container span i {
+  position: relative;
+  left: -10px;
+}
+main section:nth-child(2) #fonctionnement__container span p:nth-child(1) {
   background-color: #9356DC;
   color: white;
   border-radius: 10px;
   position: relative;
   left: -10px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12.5px;
+}
+main section:nth-child(2) #fonctionnement__container span p:nth-child(3) {
+  font-size: 15px;
 }
 
 /* Restaurant */
@@ -111,7 +168,7 @@ main section:nth-child(2) #fonctionnement__container span i:nth-child(1) {
   padding-left: 2.5%;
   padding-right: 2.5%;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 #sectionrestaurant h2 {
   margin-bottom: 0;
@@ -179,8 +236,8 @@ main section:nth-child(2) #fonctionnement__container span i:nth-child(1) {
 }
 
 footer {
-  padding-left: 2.5%;
-  padding-right: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 20px;
   background-color: #353535;
   color: white;
@@ -199,12 +256,169 @@ footer ul li i {
   height: 15px;
   margin-right: 15px;
 }
+footer ul li a {
+  color: white;
+}
 
 #footer__logo {
-  width: 25%;
+  width: 100px;
   margin-top: 15px;
   margin-bottom: 15px;
   background-repeat: no-repeat;
+}
+
+/* RESTAURANT.HTML */
+main img {
+  width: 100%;
+  height: 200px;
+}
+
+.span--separateur {
+  height: 3px;
+  display: block;
+  width: 12.5%;
+  background-color: #99E2D0;
+  margin-bottom: 10px;
+}
+
+.section__menu {
+  margin-top: 0 !important;
+  margin-bottom: -50px !important;
+  background-color: #F6F6F6;
+  position: relative;
+  top: -50px;
+  border-radius: 25px;
+  text-align: center;
+}
+.section__menu > div {
+  margin-bottom: 25px;
+  text-align: left;
+}
+.section__menu a {
+  margin-bottom: 60px;
+}
+.section__menu h2 {
+  margin-bottom: 0 !important;
+}
+.section__menu div p {
+  margin: 0;
+}
+
+.section__div--titre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding-top: 15px;
+}
+.section__div--titre i {
+  padding-right: 5%;
+}
+.section__div--titre h2 {
+  font-family: "Shrikhand", cursive;
+}
+
+.blockmenu {
+  display: flex;
+  width: 95%;
+  padding: 2.5%;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 1px gray;
+}
+.blockmenu div:nth-child(1) {
+  width: 90%;
+}
+.blockmenu div:nth-child(1) h3, .blockmenu div:nth-child(1) p {
+  margin: 0;
+  padding: 1px;
+}
+.blockmenu div:nth-child(1) h3 {
+  font-size: 15px;
+}
+.blockmenu div:nth-child(1) p {
+  font-size: 13px;
+}
+.blockmenu div:nth-child(2) {
+  width: 10%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.blockmenu div:nth-child(2) p {
+  display: inline-block;
+  margin: 0;
+  padding: 1px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+@media all and (min-width: 768px) {
+  #sectionrestaurant #sectionrestaurant__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  #sectionrestaurant a {
+    width: 40%;
+  }
+
+  #fonctionnement__container span:nth-child(n) {
+    width: 50% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media all and (min-width: 992px) {
+  main {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #sectionrestaurant {
+    width: 60%;
+  }
+  #sectionrestaurant #sectionrestaurant__container {
+    padding-bottom: 30px;
+  }
+
+  main section:nth-child(2) {
+    width: 35%;
+    margin-bottom: 0;
+    top: 50px;
+  }
+  main section:nth-child(2) #fonctionnement__container {
+    position: sticky;
+    top: 30%;
+  }
+
+  main section:nth-child(1) {
+    width: 100%;
+  }
+
+  #sectionrestaurant, section:nth-child(2) {
+    padding: 0;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+
+  #fonctionnement__container {
+    margin-top: 28.4px;
+  }
+  #fonctionnement__container span:nth-child(n) {
+    width: 97.5% !important;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
