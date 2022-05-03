@@ -21,32 +21,25 @@ h2{
     font-weight: bolder;
 }
 header{
-    display: flex;
     width: 100%;
+    text-align: center;
     h2{
-        /*width: 160px;*/
-        text-align: center;
-        width: 50%;
         height: 30px;
-        margin-left: 25%;
         font-family: 'Shrikhand';
         font-size: 27.5px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
     .header__logoretour{
-        width: 5%;
-        margin-left: 5%;
         display: none;
+        position: absolute;
         &.--visible{
-            display: flex;
-            align-items: center;
-            & + h2{
-                margin-left: 25%;
-            }
+            display: block;
+            position: absolute;
+            margin-left: 5%;
+            top: 17.5px;
         }
     }
-    
 }
 
 /* Section impaire */
@@ -107,7 +100,7 @@ main section:nth-child(2){
         padding-left: 2.5%;
         text-align: center;
         span{
-            &.--couleurprimaire{
+            &:hover{
                 background-color: lighten($couleurprimaire, 35);
                 & i:nth-child(2){
                     color: $couleurprimaire;
@@ -183,7 +176,8 @@ main section:nth-child(2){
         display: flex;
         flex-direction: column;
         border-radius: 15px;
-        /*margin-bottom: 20px;*/
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     & a img{
         display: block;
@@ -225,14 +219,15 @@ main section:nth-child(2){
     }   
 }
 .--new{
+    position: absolute;
     & p{
         display: block;
         background-color: $couleurtertiaire;
         color: darken($couleurtertiaire, 50);
         position:relative;
         padding: 5px;
-        top:38.4px;
-        right: 10px;
+        left: -35px;
+        top: 15px;
     }
 }
 footer{

@@ -20,31 +20,25 @@ h2 {
 }
 
 header {
-  display: flex;
   width: 100%;
+  text-align: center;
 }
 header h2 {
-  /*width: 160px;*/
-  text-align: center;
-  width: 50%;
   height: 30px;
-  margin-left: 25%;
   font-family: "Shrikhand";
   font-size: 27.5px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 header .header__logoretour {
-  width: 5%;
-  margin-left: 5%;
   display: none;
+  position: absolute;
 }
 header .header__logoretour.--visible {
-  display: flex;
-  align-items: center;
-}
-header .header__logoretour.--visible + h2 {
-  margin-left: 25%;
+  display: block;
+  position: absolute;
+  margin-left: 5%;
+  top: 17.5px;
 }
 
 /* Section impaire */
@@ -117,10 +111,10 @@ main section:nth-child(2) #fonctionnement__container span {
   margin-bottom: 10px;
   border-radius: 20px;
 }
-main section:nth-child(2) #fonctionnement__container span.--couleurprimaire {
+main section:nth-child(2) #fonctionnement__container span:hover {
   background-color: #f2eafb;
 }
-main section:nth-child(2) #fonctionnement__container span.--couleurprimaire i:nth-child(2) {
+main section:nth-child(2) #fonctionnement__container span:hover i:nth-child(2) {
   color: #9356DC;
 }
 main section:nth-child(2) #fonctionnement__container span:nth-child(n) {
@@ -184,7 +178,8 @@ main section:nth-child(2) #fonctionnement__container span p:nth-child(3) {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-  /*margin-bottom: 20px;*/
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 #sectionrestaurant a img {
   display: block;
@@ -225,14 +220,17 @@ main section:nth-child(2) #fonctionnement__container span p:nth-child(3) {
   display: none;
 }
 
+.--new {
+  position: absolute;
+}
 .--new p {
   display: block;
   background-color: #99E2D0;
   color: #1b6150;
   position: relative;
   padding: 5px;
-  top: 38.4px;
-  right: 10px;
+  left: -35px;
+  top: 15px;
 }
 
 footer {
