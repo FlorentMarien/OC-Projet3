@@ -388,8 +388,8 @@ main img {
     justify-content: space-around;
     flex-wrap: wrap;
   }
-  #sectionrestaurant a {
-    width: 40%;
+  #sectionrestaurant #sectionrestaurant__container a {
+    width: 45%;
   }
 
   #fonctionnement__container span:nth-child(n) {

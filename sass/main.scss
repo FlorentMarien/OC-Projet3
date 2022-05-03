@@ -224,7 +224,6 @@ main section:first-child{
                 align-items: center;
                 opacity: 1;
             }
-            
             & i + i{
                 opacity: 0;
                 background: linear-gradient($couleursecondaire,$couleurprimaire);
@@ -383,10 +382,11 @@ main img{
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
+            a{
+                width:45%;
+            }
         }
-        a{
-            width:40%;
-        }
+        
     }
     #fonctionnement__container{
         span:nth-child(n){
