@@ -47,6 +47,9 @@ main section:nth-child(odd) {
 }
 
 .section__gps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #EAEAEA;
   margin-top: 0;
   padding-top: 12.5px;
@@ -54,7 +57,12 @@ main section:nth-child(odd) {
   border-top: 3px solid lightgray;
 }
 .section__gps i {
-  margin-right: 5%;
+  flex-grow: 0.05;
+}
+.section__gps input[type=text] {
+  background-color: transparent;
+  border: 0;
+  width: 105px;
 }
 
 .section__reservation {
@@ -88,22 +96,22 @@ main section:first-child {
 }
 
 /* Fonctionnement */
-main section:nth-child(2) {
+#sectionfonctionnement {
   padding-left: 2.5%;
   padding-right: 2.5%;
   margin-bottom: 40px;
 }
-main section:nth-child(2) h2 {
+#sectionfonctionnement h2 {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 20px;
 }
-main section:nth-child(2) #fonctionnement__container {
+#sectionfonctionnement #fonctionnement__container {
   width: 97.5%;
   padding-left: 2.5%;
   text-align: center;
 }
-main section:nth-child(2) #fonctionnement__container span {
+#sectionfonctionnement #fonctionnement__container span {
   background-color: #F6F6F6;
   display: flex;
   width: 100%;
@@ -111,20 +119,20 @@ main section:nth-child(2) #fonctionnement__container span {
   margin-bottom: 10px;
   border-radius: 20px;
 }
-main section:nth-child(2) #fonctionnement__container span:hover {
+#sectionfonctionnement #fonctionnement__container span:hover {
   background-color: #f2eafb;
 }
-main section:nth-child(2) #fonctionnement__container span:hover i:nth-child(2) {
+#sectionfonctionnement #fonctionnement__container span:hover i:nth-child(2) {
   color: #9356DC;
 }
-main section:nth-child(2) #fonctionnement__container span:nth-child(n) {
+#sectionfonctionnement #fonctionnement__container span:nth-child(n) {
   align-items: center;
 }
-main section:nth-child(2) #fonctionnement__container span p {
+#sectionfonctionnement #fonctionnement__container span p {
   margin: 0;
   font-weight: bolder;
 }
-main section:nth-child(2) #fonctionnement__container span i {
+#sectionfonctionnement #fonctionnement__container span i {
   padding: 0;
   width: 20px;
   height: 20px;
@@ -134,14 +142,14 @@ main section:nth-child(2) #fonctionnement__container span i {
   justify-content: center;
   color: #B4B4B4;
 }
-main section:nth-child(2) #fonctionnement__container span p:nth-child(1), main section:nth-child(2) #fonctionnement__container span i {
+#sectionfonctionnement #fonctionnement__container span p:nth-child(1), #sectionfonctionnement #fonctionnement__container span i {
   margin-right: 7.5%;
 }
-main section:nth-child(2) #fonctionnement__container span p:nth-child(3), main section:nth-child(2) #fonctionnement__container span i {
+#sectionfonctionnement #fonctionnement__container span p:nth-child(3), #sectionfonctionnement #fonctionnement__container span i {
   position: relative;
   left: -10px;
 }
-main section:nth-child(2) #fonctionnement__container span p:nth-child(1) {
+#sectionfonctionnement #fonctionnement__container span p:nth-child(1) {
   background-color: #9356DC;
   color: white;
   border-radius: 10px;
@@ -152,7 +160,7 @@ main section:nth-child(2) #fonctionnement__container span p:nth-child(1) {
   line-height: 20px;
   font-size: 12.5px;
 }
-main section:nth-child(2) #fonctionnement__container span p:nth-child(3) {
+#sectionfonctionnement #fonctionnement__container span p:nth-child(3) {
   font-size: 15px;
 }
 

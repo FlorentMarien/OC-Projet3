@@ -47,13 +47,21 @@ main section:nth-child(odd){
     background-color: #F6F6F6;
 }
 .section__gps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color:#EAEAEA;
     margin-top: 0;
     padding-top: 12.5px;
     padding-bottom: 12.5px;
     border-top: 3px solid lightgray;
     i{
-        margin-right: 5%;
+        flex-grow: 0.05;
+    }
+    input[type=text]{
+        background-color: transparent;
+        border: 0;
+        width: 105px;
     }
 }
 .section__reservation{
@@ -84,7 +92,7 @@ main section:first-child{
     text-align: center;
 }
 /* Fonctionnement */
-main section:nth-child(2){
+#sectionfonctionnement{
     padding-left: 2.5%;
     padding-right: 2.5%;
     
