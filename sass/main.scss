@@ -210,24 +210,20 @@ main section:nth-child(2){
 }
 
 .blockrestaurant__notification{ 
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    height:28.4px;
     & p{
         display: none;
     }   
 }
 .--new{
-    position: absolute;
+    position: relative;
     & p{
         display: block;
         background-color: $couleurtertiaire;
         color: darken($couleurtertiaire, 50);
-        position:relative;
+        position:absolute;
         padding: 5px;
-        left: -35px;
-        top: 15px;
+        right: 10px;
+        top: 10px;
     }
 }
 footer{

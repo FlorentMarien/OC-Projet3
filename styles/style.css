@@ -210,27 +210,21 @@ main section:nth-child(2) #fonctionnement__container span p:nth-child(3) {
   align-items: center;
 }
 
-.blockrestaurant__notification {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  height: 28.4px;
-}
 .blockrestaurant__notification p {
   display: none;
 }
 
 .--new {
-  position: absolute;
+  position: relative;
 }
 .--new p {
   display: block;
   background-color: #99E2D0;
   color: #1b6150;
-  position: relative;
+  position: absolute;
   padding: 5px;
-  left: -35px;
-  top: 15px;
+  right: 10px;
+  top: 10px;
 }
 
 footer {
