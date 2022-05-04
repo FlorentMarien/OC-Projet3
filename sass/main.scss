@@ -349,22 +349,29 @@ main img{
 .blockmenu{
     display: flex;
     width: 95%;
-    padding: 2.5%;
+    height: 60px;
     margin-bottom: 10px;
     background-color: white;
     border-radius:15px;
     box-shadow: 0px 0px 1px gray;
+    overflow: hidden;
+    div{
+        padding: 2.5%;
+    }
     & div:nth-child(1){
         width: 90%;
+        min-width: 0%;
         h3,p{
             margin:0;
             padding: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         h3{
             font-size: 15px;
         }
         p{
-            
             font-size: 13px;
         }
     }
@@ -381,6 +388,37 @@ main img{
             font-size: 13px;
         }
     }
+    & .--addanimationpanier{
+        width: 0px;
+        rotate: 0deg;
+        padding:0;
+        transition-property: width;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+        background-color: $couleurtertiaire;
+        
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            color: white;
+            transition-property: rotate;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+        }
+    }
+    &:hover{
+        .--addanimationpanier{
+            width: 25%;
+            i{
+                rotate: 360deg;
+            }
+            
+        } 
+        
+    }
+    
 }
 @media all and (min-width: 768px){
     #sectionrestaurant{
