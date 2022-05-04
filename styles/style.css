@@ -204,7 +204,6 @@ main section:first-child {
   background-color: white;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  /* Heart anim */
 }
 #sectionrestaurant div a div div {
   width: 80%;
@@ -216,7 +215,14 @@ main section:first-child {
   position: relative;
   width: 20%;
 }
-#sectionrestaurant div a div div:nth-child(2) i {
+
+.--heartanim {
+  /* Heart anim */
+  position: relative;
+  width: 20px;
+  height: 100%;
+}
+.--heartanim i {
   transition-property: opacity;
   transition-duration: 3s;
   transition-timing-function: linear;
@@ -228,17 +234,17 @@ main section:first-child {
   align-items: center;
   opacity: 1;
 }
-#sectionrestaurant div a div div:nth-child(2) i + i {
+.--heartanim i + i {
   opacity: 0;
   background: linear-gradient(#FF79DA, #9356DC);
   color: transparent;
   text-transform: uppercase;
   -webkit-background-clip: text;
 }
-#sectionrestaurant div a div div:nth-child(2):hover i {
+.--heartanim:hover i {
   opacity: 0;
 }
-#sectionrestaurant div a div div:nth-child(2):hover i + i {
+.--heartanim:hover i + i {
   transition-delay: 3s;
   opacity: 1;
 }
@@ -336,11 +342,9 @@ main img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   height: 40px;
   padding-top: 15px;
-}
-.section__div--titre i {
-  padding-right: 5%;
 }
 .section__div--titre h2 {
   font-family: "Shrikhand", cursive;
