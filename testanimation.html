@@ -6,21 +6,174 @@
                 background-color:white;
             }
             i{
+                
+                height: 20px;
                 transition-property: color;
                 transition-duration: 5s;
                 transition-timing-function: linear;
                 transition-delay: 0s;
-                color: rgba(0,0,0,0);
             }
             i:hover{
                 color:rgba(0,0,0,255)
             }
+            /* TEST AJOUT PANIER */
+            body{
+                overflow: hidden;
+            }
+            body div{
+                width: 250px;
+                height:50px;
+                opacity: 0;
+                background-color: green;
+                margin: 5px;
+                margin-left: 120px;
+                margin-top: 30px;
+                position: relative;
+                overflow: hidden;
+            }
+            /*
+            div::before{
+                content: "";
+                rotate: 0;
+                width: 0px;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                background-color: red;
+                background-image: url("assets/logo/circle-check-solid.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size:30px;
+                transition-property: width,rotate;
+                transition-duration: 5s;
+                transition-timing-function: linear;
+                z-index: 1;
+                
+            }
+            div:hover::before{
+                width: 100%;
+                rotate:360deg;
+                
+            }
+            div:hover{
+                cursor:pointer;
+            }
+            */
+            
+            
+            
+            @keyframes fadein {
+                from {
+                    opacity:0;
+                    margin-top: 5%;
+                }
+                to {
+                    opacity:1;
+                    margin-top: 0;
+                }
+            }
+            @-moz-keyframes fadein { 
+                from {
+                    opacity:0;
+                    margin-top: 5%;
+                }
+                to {
+                    opacity:1;
+                    margin-top: 0;
+                }
+            }
+            @-webkit-keyframes fadein {
+                0% {
+                    
+                    margin-top: 5%;
+                }
+                90%{
+                    opacity:0;
+                }
+                100% {
+                    opacity:1;
+                    margin-top: 0;
+                }
+            }
+            
+            button{
+                position: absolute;
+                top:0px;
+                padding: 30px;
+            }
+            div{
+                animation-duration: 9s;  
+                animation-iteration-count: 1s;
+                animation-fill-mode: forwards;
+            }
+            div:nth-child(0){
+                animation-name: fadein;
+            }
+            div:nth-child(1){
+                animation-name: fadein;
+                animation-delay: 1s;
+            }
+            div:nth-child(2){
+                animation-name: fadein; 
+                animation-delay: 2s;
+                
+            }
+            div:nth-child(3){
+                animation-name: fadein;
+                animation-delay: 3s;
+                
+            }
+            div:nth-child(4){
+                animation-name: fadein;
+                animation-delay: 4s;
+                
+            }
+            div:nth-child(5){
+                animation-name: fadein;
+                animation-delay:5s;
+                
+            }
+            div:nth-child(6){
+                animation-name: fadein;
+                animation-delay: 6s;
+                
+            }
+            div:nth-child(7){
+                animation-name: fadein;
+                animation-delay: 7s;
+            }
+            div:nth-child(8){
+                animation-name: fadein;
+                animation-delay: 8s;
+            }
+            /*
+            div{
+                
+                transition-property: margin-top,opacity;
+                transition-duration: 3s;
+                
+                transition-timing-function: ease-in-out;
+            }
+            button:focus ~ div{
+                margin-top: 0;
+                opacity:1;
+                transition
+            }
+            */
+
         </style>
     </head>
     <body>
-        <div>
-            <i class="fa-regular fa-heart fa-lg"></i>
-            <i class="fa-solid fa-heart fa-lg"></i>
-        </div>
+        <button>Focus</button>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
     </body>
 </html>

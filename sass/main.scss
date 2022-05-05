@@ -302,7 +302,7 @@ main img{
 .span--separateur{
     height: 3px;
     display: block;
-    width: 12.5%;
+    width: 7.5%;
     background-color: $couleurtertiaire;
     margin-bottom: 10px;
 }
@@ -332,6 +332,68 @@ main img{
         margin: 0;
     }
 }
+@-webkit-keyframes fadein {
+    0% {
+        margin-top: 5%;
+        opacity: 0;
+    }
+    100% { 
+        opacity:1;
+        margin-top: 0;
+    }
+}
+
+$intervalle:2;
+$tampon:0;
+$x:0;
+$nbrelement:5;
+
+.section__menu{
+    div.listblockmenu p,div.listblockmenu span,div.listblockmenu div.blockmenu{
+        animation-duration: 2s;
+        animation-fill-mode: backwards;
+    }
+    @for $x from 1 through 3 {
+    & div.listblockmenu:nth-child(#{1+$x}){
+        $tampon:$tampon + $intervalle;
+        @if ($x==1){
+            $tampon: 0;
+        }
+        @if ($x==2){
+            $tampon: $nbrelement * $intervalle;
+        }
+        @if ($x==3){
+            $tampon: $nbrelement * 2 * $intervalle;
+        }
+        p:nth-child(1){
+            animation-name: fadein;
+            animation-delay: #{$tampon}s;   
+        }
+        $tampon:$tampon + $intervalle;
+        span:nth-child(2){
+            animation-name:fadein;
+            animation-delay: #{$tampon}s;
+        }
+        $tampon:$tampon + $intervalle;
+        div:nth-child(3){
+            animation-name: fadein;
+            animation-delay: #{$tampon}s;
+        }
+        $tampon:$tampon + $intervalle;
+        div:nth-child(4){
+            animation-name: fadein;
+            animation-delay: #{$tampon}s;            
+        }
+        $tampon:$tampon + $intervalle;
+        div:nth-child(5){
+            animation-name:fadein;
+            animation-delay: #{$tampon}s;
+            /* Fin de boucle */
+        }
+        $tampon:$tampon + $intervalle;
+    }
+    }
+}
 .section__div--titre{
     display:flex;
     justify-content: space-between;
@@ -339,17 +401,13 @@ main img{
     position: relative;
     height: 40px;
     padding-top: 15px;
-    div{
-        
-    }
     h2{
         font-family: 'Shrikhand', cursive;
     }
 }
 .blockmenu{
     display: flex;
-    width: 95%;
-    height: 60px;
+    width: 100%;
     margin-bottom: 10px;
     background-color: white;
     border-radius:15px;
@@ -413,10 +471,8 @@ main img{
             width: 25%;
             i{
                 rotate: 360deg;
-            }
-            
-        } 
-        
+            }   
+        }  
     }
     
 }
