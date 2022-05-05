@@ -243,7 +243,7 @@ main section:first-child{
         opacity: 0;   
     }
     &:hover i + i{
-        transition-delay: 3s;
+        /*transition-delay: 3s;*/
         opacity: 1;
     }
 }
@@ -343,7 +343,7 @@ main img{
     }
 }
 
-$intervalle:2;
+$intervalle:0.5;
 $tampon:0;
 $x:0;
 $nbrelement:5;
@@ -472,7 +472,14 @@ $nbrelement:5;
             i{
                 rotate: 360deg;
             }   
-        }  
+        }
+    &:focus{
+        .--addanimationpanier{
+            i{
+                rotate: 360deg;
+            }   
+        }
+    }
     }
     
 }
@@ -495,10 +502,28 @@ $nbrelement:5;
             margin-right: auto;
         }
     }
+     /* BaseRestaurant */
+     .section__menu{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .section__div--titre{
+            width: 100%;
+        }
+        .listblockmenu{
+            width: 46%;
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+        & div.listblockmenu:nth-child(4){
+            margin-left: 23%;
+            margin-right: 23%;
+        }
+     }
 }
 
 @media all and (min-width: 992px){
-    main{
+    main#index{
         display: flex !important;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -509,7 +534,7 @@ $nbrelement:5;
             padding-bottom: 30px;
         }
     }
-    main section:nth-child(2){
+    main #sectionfonctionnement{
         width: 35%;
         margin-bottom: 0;
         top:50px;
@@ -518,10 +543,10 @@ $nbrelement:5;
             top:30%;
         }
     }
-    main section:nth-child(1){
+    main #sectiongps{
         width: 100%;
     }
-    #sectionrestaurant,section:nth-child(2){
+    #sectionrestaurant,#sectionfonctionnement{
         padding: 0;
         margin-top: 30px;
         border-radius: 20px;
@@ -540,5 +565,18 @@ $nbrelement:5;
         display: flex;
         justify-content: space-around;
     }
-  
+
+     /* BaseRestaurant */
+     .section__menu{
+        
+        .listblockmenu{
+            width: 30%;
+            margin-left: 1.5%;
+            margin-right: 1.5%;
+        }
+        & div.listblockmenu:nth-child(4){
+            margin-left: 1.5%;
+            margin-right: 1.5%;
+        }
+     }
 }

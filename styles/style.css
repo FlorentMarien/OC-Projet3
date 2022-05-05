@@ -245,7 +245,7 @@ main section:first-child {
   opacity: 0;
 }
 .--heartanim:hover i + i {
-  transition-delay: 3s;
+  /*transition-delay: 3s;*/
   opacity: 1;
 }
 
@@ -358,61 +358,61 @@ main img {
 }
 .section__menu div.listblockmenu:nth-child(2) span:nth-child(2) {
   animation-name: fadein;
-  animation-delay: 2s;
+  animation-delay: 0.5s;
 }
 .section__menu div.listblockmenu:nth-child(2) div:nth-child(3) {
   animation-name: fadein;
-  animation-delay: 4s;
+  animation-delay: 1s;
 }
 .section__menu div.listblockmenu:nth-child(2) div:nth-child(4) {
   animation-name: fadein;
-  animation-delay: 6s;
+  animation-delay: 1.5s;
 }
 .section__menu div.listblockmenu:nth-child(2) div:nth-child(5) {
   animation-name: fadein;
-  animation-delay: 8s;
+  animation-delay: 2s;
   /* Fin de boucle */
 }
 .section__menu div.listblockmenu:nth-child(3) p:nth-child(1) {
   animation-name: fadein;
-  animation-delay: 10s;
+  animation-delay: 2.5s;
 }
 .section__menu div.listblockmenu:nth-child(3) span:nth-child(2) {
   animation-name: fadein;
-  animation-delay: 12s;
+  animation-delay: 3s;
 }
 .section__menu div.listblockmenu:nth-child(3) div:nth-child(3) {
   animation-name: fadein;
-  animation-delay: 14s;
+  animation-delay: 3.5s;
 }
 .section__menu div.listblockmenu:nth-child(3) div:nth-child(4) {
   animation-name: fadein;
-  animation-delay: 16s;
+  animation-delay: 4s;
 }
 .section__menu div.listblockmenu:nth-child(3) div:nth-child(5) {
   animation-name: fadein;
-  animation-delay: 18s;
+  animation-delay: 4.5s;
   /* Fin de boucle */
 }
 .section__menu div.listblockmenu:nth-child(4) p:nth-child(1) {
   animation-name: fadein;
-  animation-delay: 20s;
+  animation-delay: 5s;
 }
 .section__menu div.listblockmenu:nth-child(4) span:nth-child(2) {
   animation-name: fadein;
-  animation-delay: 22s;
+  animation-delay: 5.5s;
 }
 .section__menu div.listblockmenu:nth-child(4) div:nth-child(3) {
   animation-name: fadein;
-  animation-delay: 24s;
+  animation-delay: 6s;
 }
 .section__menu div.listblockmenu:nth-child(4) div:nth-child(4) {
   animation-name: fadein;
-  animation-delay: 26s;
+  animation-delay: 6.5s;
 }
 .section__menu div.listblockmenu:nth-child(4) div:nth-child(5) {
   animation-name: fadein;
-  animation-delay: 28s;
+  animation-delay: 7s;
   /* Fin de boucle */
 }
 
@@ -495,6 +495,9 @@ main img {
 .blockmenu:hover .--addanimationpanier i {
   rotate: 360deg;
 }
+.blockmenu:hover:focus .--addanimationpanier i {
+  rotate: 360deg;
+}
 
 @media all and (min-width: 768px) {
   #sectionrestaurant #sectionrestaurant__container {
@@ -511,9 +514,28 @@ main img {
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* BaseRestaurant */
+  .section__menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .section__menu .section__div--titre {
+    width: 100%;
+  }
+  .section__menu .listblockmenu {
+    width: 46%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .section__menu div.listblockmenu:nth-child(4) {
+    margin-left: 23%;
+    margin-right: 23%;
+  }
 }
 @media all and (min-width: 992px) {
-  main {
+  main#index {
     display: flex !important;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -526,21 +548,21 @@ main img {
     padding-bottom: 30px;
   }
 
-  main section:nth-child(2) {
+  main #sectionfonctionnement {
     width: 35%;
     margin-bottom: 0;
     top: 50px;
   }
-  main section:nth-child(2) #fonctionnement__container {
+  main #sectionfonctionnement #fonctionnement__container {
     position: sticky;
     top: 30%;
   }
 
-  main section:nth-child(1) {
+  main #sectiongps {
     width: 100%;
   }
 
-  #sectionrestaurant, section:nth-child(2) {
+  #sectionrestaurant, #sectionfonctionnement {
     padding: 0;
     margin-top: 30px;
     border-radius: 20px;
@@ -560,6 +582,17 @@ main img {
   footer ul {
     display: flex;
     justify-content: space-around;
+  }
+
+  /* BaseRestaurant */
+  .section__menu .listblockmenu {
+    width: 30%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+  .section__menu div.listblockmenu:nth-child(4) {
+    margin-left: 1.5%;
+    margin-right: 1.5%;
   }
 }
 
