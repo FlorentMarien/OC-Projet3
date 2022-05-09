@@ -56,7 +56,7 @@ h2 {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,6 +178,10 @@ main section:nth-child(odd) {
   color: white;
   border: 0;
 }
+.buttoncolor:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 2.5px black;
+}
 
 main section:first-child {
   text-align: center;
@@ -199,7 +203,7 @@ main section:first-child {
   padding-left: 2.5%;
   text-align: center;
 }
-#sectionfonctionnement #fonctionnement__container span {
+#sectionfonctionnement #fonctionnement__container div {
   background-color: #F6F6F6;
   display: flex;
   width: 100%;
@@ -207,20 +211,20 @@ main section:first-child {
   margin-bottom: 10px;
   border-radius: 20px;
 }
-#sectionfonctionnement #fonctionnement__container span:hover {
+#sectionfonctionnement #fonctionnement__container div:hover {
   background-color: #f2eafb;
 }
-#sectionfonctionnement #fonctionnement__container span:hover i:nth-child(2) {
+#sectionfonctionnement #fonctionnement__container div:hover i:nth-child(2) {
   color: #9356DC;
 }
-#sectionfonctionnement #fonctionnement__container span:nth-child(n) {
+#sectionfonctionnement #fonctionnement__container div:nth-child(n) {
   align-items: center;
 }
-#sectionfonctionnement #fonctionnement__container span p {
+#sectionfonctionnement #fonctionnement__container div p {
   margin: 0;
   font-weight: bolder;
 }
-#sectionfonctionnement #fonctionnement__container span i {
+#sectionfonctionnement #fonctionnement__container div i {
   padding: 0;
   width: 20px;
   height: 20px;
@@ -230,14 +234,14 @@ main section:first-child {
   justify-content: center;
   color: #B4B4B4;
 }
-#sectionfonctionnement #fonctionnement__container span p:nth-child(1), #sectionfonctionnement #fonctionnement__container span i {
+#sectionfonctionnement #fonctionnement__container div p:nth-child(1), #sectionfonctionnement #fonctionnement__container div i {
   margin-right: 7.5%;
 }
-#sectionfonctionnement #fonctionnement__container span p:nth-child(3), #sectionfonctionnement #fonctionnement__container span i {
+#sectionfonctionnement #fonctionnement__container div p:nth-child(3), #sectionfonctionnement #fonctionnement__container div i {
   position: relative;
   left: -10px;
 }
-#sectionfonctionnement #fonctionnement__container span p:nth-child(1) {
+#sectionfonctionnement #fonctionnement__container div p:nth-child(1) {
   background-color: #9356DC;
   color: white;
   border-radius: 10px;
@@ -248,7 +252,7 @@ main section:first-child {
   line-height: 20px;
   font-size: 12.5px;
 }
-#sectionfonctionnement #fonctionnement__container span p:nth-child(3) {
+#sectionfonctionnement #fonctionnement__container div p:nth-child(3) {
   font-size: 15px;
 }
 
@@ -314,7 +318,7 @@ main section:first-child {
 }
 .logo--heartanim i {
   transition-property: opacity;
-  transition-duration: 3s;
+  transition-duration: 1.5s;
   transition-timing-function: linear;
   position: absolute;
   width: 100%;
@@ -335,7 +339,6 @@ main section:first-child {
   opacity: 0;
 }
 .logo--heartanim:hover i + i {
-  /*transition-delay: 3s;*/
   opacity: 1;
 }
 
@@ -612,7 +615,7 @@ main img {
     width: 45%;
   }
 
-  #fonctionnement__container span:nth-child(n) {
+  #fonctionnement__container div:nth-child(n) {
     width: 50% !important;
     margin-left: auto;
     margin-right: auto;
@@ -678,7 +681,7 @@ main img {
   #fonctionnement__container {
     margin-top: 28.4px;
   }
-  #fonctionnement__container span:nth-child(n) {
+  #fonctionnement__container div:nth-child(n) {
     width: 97.5% !important;
   }
 
