@@ -122,7 +122,7 @@ header .header__logoretour {
   display: none;
   position: absolute;
 }
-header .header__logoretour.--visible {
+header .header__logoretour--visible {
   display: block;
   position: absolute;
   margin-left: 5%;
@@ -306,13 +306,13 @@ main section:first-child {
   width: 15%;
 }
 
-.--heartanim {
+.logo--heartanim {
   /* Heart anim */
   position: relative;
   width: 20px;
   height: 100%;
 }
-.--heartanim i {
+.logo--heartanim i {
   transition-property: opacity;
   transition-duration: 3s;
   transition-timing-function: linear;
@@ -324,17 +324,17 @@ main section:first-child {
   align-items: center;
   opacity: 1;
 }
-.--heartanim i + i {
+.logo--heartanim i + i {
   opacity: 0;
   background: linear-gradient(#FF79DA, #9356DC);
   color: transparent;
   text-transform: uppercase;
   -webkit-background-clip: text;
 }
-.--heartanim:hover i {
+.logo--heartanim:hover i {
   opacity: 0;
 }
-.--heartanim:hover i + i {
+.logo--heartanim:hover i + i {
   /*transition-delay: 3s;*/
   opacity: 1;
 }
@@ -342,11 +342,10 @@ main section:first-child {
 .blockrestaurant__notification p {
   display: none;
 }
-
-.--new {
+.blockrestaurant__notification--new {
   position: relative;
 }
-.--new p {
+.blockrestaurant__notification--new p {
   display: block;
   background-color: #99E2D0;
   color: #1b6150;
@@ -577,9 +576,8 @@ main img {
   font-weight: bold;
   font-size: 13px;
 }
-.blockmenu .--addanimationpanier {
+.blockmenu .blockmenu--addanimationpanier {
   width: 0px;
-  rotate: 0deg;
   padding: 0;
   transition-property: width;
   transition-duration: 1s;
@@ -590,20 +588,18 @@ main img {
   justify-content: center;
   align-items: center;
 }
-.blockmenu .--addanimationpanier i {
+.blockmenu .blockmenu--addanimationpanier i {
   color: white;
-  transition-property: rotate;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
+  transition: transform ease-in-out 1s;
 }
-.blockmenu:hover .--addanimationpanier {
+.blockmenu:hover .blockmenu--addanimationpanier {
   width: 25%;
 }
-.blockmenu:hover .--addanimationpanier i {
-  rotate: 360deg;
+.blockmenu:hover .blockmenu--addanimationpanier i {
+  transform: rotate(360deg);
 }
-.blockmenu:hover:focus .--addanimationpanier i {
-  rotate: 360deg;
+.blockmenu:hover:focus .blockmenu--addanimationpanier i {
+  transform: rotate(360deg);
 }
 
 @media all and (min-width: 768px) {

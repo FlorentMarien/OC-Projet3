@@ -93,7 +93,7 @@ header{
     .header__logoretour{
         display: none;
         position: absolute;
-        &.--visible{
+        &--visible{
             display: block;
             position: absolute;
             margin-left: 5%;
@@ -101,7 +101,6 @@ header{
         }
     }
 }
-
 /* Section impaire */
 main section:nth-child(odd){
     background-color: #F6F6F6;
@@ -277,7 +276,7 @@ main section:first-child{
 }
 
 
-.--heartanim{
+.logo--heartanim{
     /* Heart anim */
     position: relative;
     width: 20px;
@@ -312,18 +311,18 @@ main section:first-child{
 .blockrestaurant__notification{ 
     & p{
         display: none;
-    }   
-}
-.--new{
-    position: relative;
-    & p{
-        display: block;
-        background-color: $couleurtertiaire;
-        color: darken($couleurtertiaire, 50);
-        position:absolute;
-        padding: 5px;
-        right: 10px;
-        top: 10px;
+    }
+    &--new{
+        position: relative;
+        & p{
+            display: block;
+            background-color: $couleurtertiaire;
+            color: darken($couleurtertiaire, 50);
+            position:absolute;
+            padding: 5px;
+            right: 10px;
+            top: 10px;
+        }
     }
 }
 footer{
@@ -517,9 +516,8 @@ $nbrelement:5;
             font-size: 13px;
         }
     }
-    & .--addanimationpanier{
+    & .blockmenu--addanimationpanier{
         width: 0px;
-        rotate: 0deg;
         padding:0;
         transition-property: width;
         transition-duration: 1s;
@@ -532,22 +530,20 @@ $nbrelement:5;
         align-items: center;
         i{
             color: white;
-            transition-property: rotate;
-            transition-duration: 1s;
-            transition-timing-function: ease-in-out;
+            transition:transform ease-in-out 1s
         }
     }
     &:hover{
-        .--addanimationpanier{
+        .blockmenu--addanimationpanier{
             width: 25%;
             i{
-                rotate: 360deg;
+                transform:rotate(360deg);
             }   
         }
     &:focus{
-        .--addanimationpanier{
+        .blockmenu--addanimationpanier{
             i{
-                rotate: 360deg;
+                transform:rotate(360deg);
             }   
         }
     }
