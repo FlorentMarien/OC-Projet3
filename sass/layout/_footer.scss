@@ -1,0 +1,30 @@
+footer{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 20px;
+    background-color: #353535;
+    color:white;
+    ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+        li{
+            padding-bottom: 2.5px;
+            i{
+                padding: 0;
+                width: 15px;
+                height: 15px;
+                margin-right: 15px;
+            }
+            a{
+                color: white;
+            }
+        }
+    }
+}
+#footer__logo{
+    width: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+}

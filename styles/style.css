@@ -1,24 +1,4 @@
-/* Temporaire
-img{
-    width:100px;
-    height:100px;
-
-}
- */
-body {
-  font-family: "Roboto";
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-h2 {
-  font-size: 22.5px;
-  font-weight: bolder;
-}
-
+/* Anim progressif */
 @keyframes loadspinner {
   0% {
     height: 0px;
@@ -50,6 +30,33 @@ h2 {
     height: 0;
   }
 }
+@-webkit-keyframes fadein {
+  0% {
+    margin-top: 40px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+body {
+  font-family: "Roboto";
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 22.5px;
+  font-weight: bolder;
+}
+
 #chargement {
   background-color: black;
   margin: 0;
@@ -177,6 +184,7 @@ main section:nth-child(odd) {
   padding-right: 20px;
   color: white;
   border: 0;
+  cursor: pointer;
 }
 .buttoncolor:hover {
   opacity: 0.8;
@@ -431,19 +439,6 @@ main img {
   margin: 0;
 }
 
-@-webkit-keyframes fadein {
-  0% {
-    margin-top: 40px;
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 1;
-    margin-top: 0;
-  }
-}
 .section__menu {
   /* Fade in restaurant*/
 }
@@ -601,9 +596,6 @@ main img {
 .blockmenu:hover .blockmenu--addanimationpanier i {
   transform: rotate(360deg);
 }
-.blockmenu:hover:focus .blockmenu--addanimationpanier i {
-  transform: rotate(360deg);
-}
 
 @media all and (min-width: 768px) {
   #sectionrestaurant #sectionrestaurant__container {
@@ -631,9 +623,9 @@ main img {
     width: 100%;
   }
   .section__menu .listblockmenu {
-    width: 46%;
+    width: 50%;
     margin-left: 1%;
-    margin-right: 1%;
+    margin-left: 1%;
   }
   .section__menu div.listblockmenu:nth-child(4) {
     margin-left: 23%;
@@ -666,6 +658,9 @@ main img {
 
   main #sectiongps {
     width: 100%;
+  }
+  main #sectiongps i {
+    flex-grow: 0.03;
   }
 
   #sectionrestaurant, #sectionfonctionnement {

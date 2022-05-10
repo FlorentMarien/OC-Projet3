@@ -1,0 +1,22 @@
+header{
+    width: 100%;
+    text-align: center;
+    h2{
+        height: 30px;
+        font-family: 'Shrikhand';
+        font-size: 27.5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin:0;
+    }
+    .header__logoretour{
+        display: none;
+        position: absolute;
+        &--visible{
+            display: block;
+            position: absolute;
+            margin-left: 5%;
+            top: 17.5px;
+        }
+    }
+}
