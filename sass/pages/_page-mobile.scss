@@ -1,0 +1,374 @@
+#chargement{
+    background-color: black;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 1s;
+    animation: exitload 1s linear 1;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+.wave{
+    width: 1px;
+    height: 1px;
+    background: linear-gradient(45deg,$couleurprimaire,$couleursecondaire);
+    margin: 15px;
+    animation: loadspinner 1s linear infinite;
+} 
+@for $var from  1 through 8 {
+    .wave:nth-child(#{$var}){
+        animation-delay: #{$var/8}s;
+    }
+}
+
+/* Section impaire */
+main section:nth-child(odd){
+    background-color: #F6F6F6;
+}
+.section__gps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#EAEAEA;
+    margin-top: 0;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+    border-top: 3px solid lightgray;
+    i{
+        flex-grow: 0.05;
+    }
+    input[type=text]{
+        background-color: transparent;
+        border: 0;
+        width: 105px;
+    }
+}
+.section__reservation{
+    padding-bottom: 40px;
+    a{
+        display: inline-block;
+    }
+    h2{
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+    p{
+        margin-left:5%;
+        margin-right: 5%;
+    }
+}
+/* Fonctionnement */
+#sectionfonctionnement{
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    
+    margin-bottom:40px;
+    h2{
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+    
+    }
+    #fonctionnement__container{
+        width: 97.5%;
+        padding-left: 2.5%;
+        text-align: center;
+        div{
+            &:hover{
+                background-color: lighten($couleurprimaire, 35);
+                & i:nth-child(2){
+                    color: $couleurprimaire;
+                }
+            }
+            background-color: #F6F6F6;
+            display: flex;
+            width: 100%;
+            height: 60px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            &:nth-child(n){
+                align-items: center;
+            }
+            & p{
+                margin: 0;
+                font-weight: bolder; 
+            }
+            & i{
+                padding: 0;
+                width:20px;
+                height: 20px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color:#B4B4B4;
+            }
+            & p:nth-child(1), & i{
+                margin-right: 7.5%;
+            }
+            & p:nth-child(3), & i{
+                position: relative;
+                left:-10px;
+            }
+
+            & p:nth-child(1){
+                background-color: $couleurprimaire;
+                color: white;
+                border-radius: 10px;
+                position:relative;
+                left: -10px;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                font-size: 12.5px;
+            }
+            & p:nth-child(3){
+                font-size: 15px;
+            }
+        }
+    }
+}
+main section:first-child{
+    text-align: center;
+}
+
+/* Restaurant */
+#sectionrestaurant{
+    width: 95%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top:20px;
+    padding-bottom:40px;
+    h2{
+        margin-bottom: 0;
+    }
+    h3,p{
+        margin: 0;
+    }
+    .sectionrestaurant__reservation{
+        width: 100%;
+    }
+    & div a{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    & div a img{
+        display: block;
+        width: 100%;
+        height:150px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+}
+.blockrestaurant__container{
+    display: flex;
+    width: 100%;
+    height:70px;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    div:nth-child(1){
+        width:80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 5%;
+    }
+    div:nth-child(2){
+        position: relative;
+        width: 15%;
+    }
+}
+.blockrestaurant__notification{ 
+    & p{
+        display: none;
+    }
+    &--new{
+        position: relative;
+        & p{
+            display: block;
+            background-color: $couleurtertiaire;
+            color: darken($couleurtertiaire, 50);
+            position:absolute;
+            padding: 5px;
+            right: 10px;
+            top: 10px;
+        }
+    }
+}
+/* RESTAURANT.HTML */
+main img{
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+}
+.span--separateur{
+    height: 3px;
+    display: block;
+    width: 7.5%;
+    background-color: $couleurtertiaire;
+    margin-bottom: 10px;
+}
+.section__menu{
+    margin-top: 0 !important;
+    margin-bottom:-50px !important;
+    background-color: #F6F6F6;
+    position: relative;
+    top:-50px;
+    border-radius: 25px;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    & > div{
+        margin-bottom: 25px;
+        text-align: left;
+    }
+    & a{
+        margin-bottom: 60px;
+    }
+    h2{
+        margin-bottom: 0 !important;
+        margin-top: 0;
+    }
+    div p{
+        margin: 0;
+    }
+}
+.section__menu{
+    div.listblockmenu p,div.listblockmenu span,div.listblockmenu div.blockmenu{
+        animation-duration: 2s;
+        animation-fill-mode: backwards;
+        animation-timing-function: ease-in-out;
+    }
+    /* Fade in restaurant*/
+    @for $x from 1 through 3 {
+    & div.listblockmenu:nth-child(#{1+$x}){
+        $tampon:$tampon + $intervalle;
+        @if ($x==1){
+            $tampon: 0;
+        }
+        @if ($x==2){
+            $tampon: $nbrelement * $intervalle;
+        }
+        @if ($x==3){
+            $tampon: $nbrelement * 2 * $intervalle;
+        }
+        p:nth-child(1),span:nth-child(2),div:nth-child(3),div:nth-child(4),div:nth-child(5){
+            animation-timing-function: ease-in-out;
+        }
+        p:nth-child(1){
+            animation-name: fadein;
+            animation-delay: #{$tampon}s; 
+        }
+        $tampon:$tampon + $intervalle;
+        span:nth-child(2){
+            animation-name:fadein;
+            animation-delay: #{$tampon}s;
+        }
+        $tampon:$tampon + $intervalle;
+        div:nth-child(3){
+            animation-name: fadein;
+            animation-delay: #{$tampon}s;
+        }
+        $tampon:$tampon + $intervalle;
+        div:nth-child(4){
+            animation-name: fadein;
+            animation-delay: #{$tampon}s;            
+        }
+        $tampon:$tampon + $intervalle;
+        div:nth-child(5){
+            animation-name:fadein;
+            animation-delay: #{$tampon}s;
+        }
+        $tampon:$tampon + $intervalle;
+    }
+    }
+}
+.section__div--titre{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 40px;
+    padding-top: 15px;
+    h2{
+        font-family: 'Shrikhand', cursive;
+    }
+}
+.blockmenu{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius:15px;
+    box-shadow: 0px 0px 1px gray;
+    overflow: hidden;
+    div{
+        padding: 2.5%;
+    }
+    & div:nth-child(1){
+        width: 90%;
+        min-width: 0%;
+        h3,p{
+            margin:0;
+            padding: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        h3{
+            font-size: 15px;
+        }
+        p{
+            font-size: 13px;
+        }
+    }
+    & div:nth-child(2){
+        width: 10%;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        & p{
+            display: inline-block;
+            margin: 0;
+            padding: 1px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+    }
+    & .blockmenu--addanimationpanier{
+        width: 0px;
+        padding:0;
+        transition-property: width;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+        background-color: $couleurtertiaire;
+        
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            color: white;
+            transition:transform ease-in-out 1s
+        }
+    }
+    &:hover{
+        .blockmenu--addanimationpanier{
+            width: 25%;
+            i{
+                transform:rotate(360deg);
+            }   
+        }
+    }
+}
