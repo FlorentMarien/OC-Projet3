@@ -22,7 +22,7 @@
 } 
 @for $var from  1 through 8 {
     .wave:nth-child(#{$var}){
-        animation-delay: #{$var/8}s;
+        animation-delay: #{calc($var/8)}s;
     }
 }
 
@@ -245,53 +245,51 @@ main img{
     }
 }
 .section__menu{
-    div.listblockmenu p,div.listblockmenu span,div.listblockmenu div.blockmenu{
-        animation-duration: 2s;
+    :nth-child(n){
+        animation-duration: #{$delayanimation}s;
         animation-fill-mode: backwards;
         animation-timing-function: ease-in-out;
     }
-    /* Fade in restaurant*/
-    @for $x from 1 through 3 {
-    & div.listblockmenu:nth-child(#{1+$x}){
-        $tampon:$tampon + $intervalle;
-        @if ($x==1){
-            $tampon: 0;
+    
+    $max:6;
+    /* Fade in restaurant 6 Elements 3 Menu*/
+    div.listblockmenu{
+        $compteurelement:0;
+        @for $x from 1 through 3 {
+            &:nth-child(#{$x+1}){
+                @for $y from 1 through 5{
+                    :nth-child(#{$y}){
+                        $compteurelement:$compteurelement + 1;
+                        animation-delay: #{$intervalle * $compteurelement}s;
+                        animation-name: fadein;
+                    }
+                }
+            }
         }
-        @if ($x==2){
-            $tampon: $nbrelement * $intervalle;
-        }
-        @if ($x==3){
-            $tampon: $nbrelement * 2 * $intervalle;
-        }
-        p:nth-child(1),span:nth-child(2),div:nth-child(3),div:nth-child(4),div:nth-child(5){
-            animation-timing-function: ease-in-out;
-        }
-        p:nth-child(1){
-            animation-name: fadein;
-            animation-delay: #{$tampon}s; 
-        }
-        $tampon:$tampon + $intervalle;
-        span:nth-child(2){
-            animation-name:fadein;
-            animation-delay: #{$tampon}s;
-        }
-        $tampon:$tampon + $intervalle;
-        div:nth-child(3){
-            animation-name: fadein;
-            animation-delay: #{$tampon}s;
-        }
-        $tampon:$tampon + $intervalle;
-        div:nth-child(4){
-            animation-name: fadein;
-            animation-delay: #{$tampon}s;            
-        }
-        $tampon:$tampon + $intervalle;
-        div:nth-child(5){
-            animation-name:fadein;
-            animation-delay: #{$tampon}s;
-        }
-        $tampon:$tampon + $intervalle;
     }
+    .elements6{
+        $compteurelement:0;
+        @for $y from 1 through 6{
+            :nth-child(#{$y}){
+                $compteurelement:$compteurelement + 1;
+                animation-delay: #{$intervalle * $compteurelement}s;
+                animation-name: fadein;
+            }
+        }
+
+        @for $x from 2 through 3 {
+            &~{
+                div.listblockmenu:nth-child(#{$x+1}){
+                    @for $y from 1 through 5{
+                        & :nth-child(#{$y}){
+                            $compteurelement:$compteurelement + 1;
+                            animation-delay: #{$intervalle * $compteurelement}s;
+                            animation-name: fadein;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .section__div--titre{

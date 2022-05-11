@@ -30,7 +30,7 @@
     height: 0;
   }
 }
-@-webkit-keyframes fadein {
+@keyframes fadein {
   0% {
     margin-top: 40px;
     opacity: 0;
@@ -55,6 +55,109 @@ a {
 h2 {
   font-size: 22.5px;
   font-weight: bolder;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+header h2 {
+  height: 30px;
+  font-family: "Shrikhand";
+  font-size: 27.5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+header .header__logoretour {
+  display: none;
+  position: absolute;
+}
+header .header__logoretour--visible {
+  display: block;
+  position: absolute;
+  margin-left: 5%;
+  top: 17.5px;
+}
+
+footer {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 20px;
+  background-color: #353535;
+  color: white;
+}
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+footer ul li {
+  padding-bottom: 2.5px;
+}
+footer ul li i {
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+}
+footer ul li a {
+  color: white;
+}
+
+#footer__logo {
+  width: 100px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-repeat: no-repeat;
+}
+
+.buttoncolor {
+  display: inline-block;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+.buttoncolor:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 2.5px black;
+}
+
+.logo--heartanim {
+  /* Heart anim */
+  position: relative;
+  width: 20px;
+  height: 100%;
+}
+.logo--heartanim i {
+  transition-property: opacity;
+  transition-duration: 1.5s;
+  transition-timing-function: linear;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+.logo--heartanim i + i {
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: transparent;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+}
+.logo--heartanim:hover i {
+  opacity: 0;
+}
+.logo--heartanim:hover i + i {
+  opacity: 1;
 }
 
 #chargement {
@@ -113,29 +216,6 @@ h2 {
   animation-delay: 1s;
 }
 
-header {
-  width: 100%;
-  text-align: center;
-}
-header h2 {
-  height: 30px;
-  font-family: "Shrikhand";
-  font-size: 27.5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 0;
-}
-header .header__logoretour {
-  display: none;
-  position: absolute;
-}
-header .header__logoretour--visible {
-  display: block;
-  position: absolute;
-  margin-left: 5%;
-  top: 17.5px;
-}
-
 /* Section impaire */
 main section:nth-child(odd) {
   background-color: #F6F6F6;
@@ -173,26 +253,6 @@ main section:nth-child(odd) {
 .section__reservation p {
   margin-left: 5%;
   margin-right: 5%;
-}
-
-.buttoncolor {
-  display: inline-block;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 25px;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: white;
-  border: 0;
-  cursor: pointer;
-}
-.buttoncolor:hover {
-  opacity: 0.8;
-  box-shadow: 0 0 2.5px black;
-}
-
-main section:first-child {
-  text-align: center;
 }
 
 /* Fonctionnement */
@@ -264,6 +324,10 @@ main section:first-child {
   font-size: 15px;
 }
 
+main section:first-child {
+  text-align: center;
+}
+
 /* Restaurant */
 #sectionrestaurant {
   width: 95%;
@@ -318,38 +382,6 @@ main section:first-child {
   width: 15%;
 }
 
-.logo--heartanim {
-  /* Heart anim */
-  position: relative;
-  width: 20px;
-  height: 100%;
-}
-.logo--heartanim i {
-  transition-property: opacity;
-  transition-duration: 1.5s;
-  transition-timing-function: linear;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-}
-.logo--heartanim i + i {
-  opacity: 0;
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: transparent;
-  text-transform: uppercase;
-  -webkit-background-clip: text;
-}
-.logo--heartanim:hover i {
-  opacity: 0;
-}
-.logo--heartanim:hover i + i {
-  opacity: 1;
-}
-
 .blockrestaurant__notification p {
   display: none;
 }
@@ -364,38 +396,6 @@ main section:first-child {
   padding: 5px;
   right: 10px;
   top: 10px;
-}
-
-footer {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 20px;
-  background-color: #353535;
-  color: white;
-}
-footer ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-footer ul li {
-  padding-bottom: 2.5px;
-}
-footer ul li i {
-  padding: 0;
-  width: 15px;
-  height: 15px;
-  margin-right: 15px;
-}
-footer ul li a {
-  color: white;
-}
-
-#footer__logo {
-  width: 100px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  background-repeat: no-repeat;
 }
 
 /* RESTAURANT.HTML */
@@ -440,84 +440,136 @@ main img {
 }
 
 .section__menu {
-  /* Fade in restaurant*/
+  /* Fade in restaurant 6 Elements 3 Menu*/
 }
-.section__menu div.listblockmenu p, .section__menu div.listblockmenu span, .section__menu div.listblockmenu div.blockmenu {
+.section__menu :nth-child(n) {
   animation-duration: 2s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
 }
-.section__menu div.listblockmenu:nth-child(2) p:nth-child(1), .section__menu div.listblockmenu:nth-child(2) span:nth-child(2), .section__menu div.listblockmenu:nth-child(2) div:nth-child(3), .section__menu div.listblockmenu:nth-child(2) div:nth-child(4), .section__menu div.listblockmenu:nth-child(2) div:nth-child(5) {
-  animation-timing-function: ease-in-out;
-}
-.section__menu div.listblockmenu:nth-child(2) p:nth-child(1) {
-  animation-name: fadein;
-  animation-delay: 0s;
-}
-.section__menu div.listblockmenu:nth-child(2) span:nth-child(2) {
-  animation-name: fadein;
-  animation-delay: 0.5s;
-}
-.section__menu div.listblockmenu:nth-child(2) div:nth-child(3) {
-  animation-name: fadein;
+.section__menu div.listblockmenu:nth-child(2) :nth-child(1) {
   animation-delay: 1s;
-}
-.section__menu div.listblockmenu:nth-child(2) div:nth-child(4) {
   animation-name: fadein;
-  animation-delay: 1.5s;
 }
-.section__menu div.listblockmenu:nth-child(2) div:nth-child(5) {
-  animation-name: fadein;
+.section__menu div.listblockmenu:nth-child(2) :nth-child(2) {
   animation-delay: 2s;
-  /* Fin de boucle */
-}
-.section__menu div.listblockmenu:nth-child(3) p:nth-child(1), .section__menu div.listblockmenu:nth-child(3) span:nth-child(2), .section__menu div.listblockmenu:nth-child(3) div:nth-child(3), .section__menu div.listblockmenu:nth-child(3) div:nth-child(4), .section__menu div.listblockmenu:nth-child(3) div:nth-child(5) {
-  animation-timing-function: ease-in-out;
-}
-.section__menu div.listblockmenu:nth-child(3) p:nth-child(1) {
   animation-name: fadein;
-  animation-delay: 2.5s;
 }
-.section__menu div.listblockmenu:nth-child(3) span:nth-child(2) {
-  animation-name: fadein;
+.section__menu div.listblockmenu:nth-child(2) :nth-child(3) {
   animation-delay: 3s;
-}
-.section__menu div.listblockmenu:nth-child(3) div:nth-child(3) {
   animation-name: fadein;
-  animation-delay: 3.5s;
 }
-.section__menu div.listblockmenu:nth-child(3) div:nth-child(4) {
-  animation-name: fadein;
+.section__menu div.listblockmenu:nth-child(2) :nth-child(4) {
   animation-delay: 4s;
-}
-.section__menu div.listblockmenu:nth-child(3) div:nth-child(5) {
   animation-name: fadein;
-  animation-delay: 4.5s;
-  /* Fin de boucle */
 }
-.section__menu div.listblockmenu:nth-child(4) p:nth-child(1), .section__menu div.listblockmenu:nth-child(4) span:nth-child(2), .section__menu div.listblockmenu:nth-child(4) div:nth-child(3), .section__menu div.listblockmenu:nth-child(4) div:nth-child(4), .section__menu div.listblockmenu:nth-child(4) div:nth-child(5) {
-  animation-timing-function: ease-in-out;
-}
-.section__menu div.listblockmenu:nth-child(4) p:nth-child(1) {
-  animation-name: fadein;
+.section__menu div.listblockmenu:nth-child(2) :nth-child(5) {
   animation-delay: 5s;
-}
-.section__menu div.listblockmenu:nth-child(4) span:nth-child(2) {
   animation-name: fadein;
-  animation-delay: 5.5s;
 }
-.section__menu div.listblockmenu:nth-child(4) div:nth-child(3) {
-  animation-name: fadein;
+.section__menu div.listblockmenu:nth-child(3) :nth-child(1) {
   animation-delay: 6s;
-}
-.section__menu div.listblockmenu:nth-child(4) div:nth-child(4) {
   animation-name: fadein;
-  animation-delay: 6.5s;
 }
-.section__menu div.listblockmenu:nth-child(4) div:nth-child(5) {
-  animation-name: fadein;
+.section__menu div.listblockmenu:nth-child(3) :nth-child(2) {
   animation-delay: 7s;
-  /* Fin de boucle */
+  animation-name: fadein;
+}
+.section__menu div.listblockmenu:nth-child(3) :nth-child(3) {
+  animation-delay: 8s;
+  animation-name: fadein;
+}
+.section__menu div.listblockmenu:nth-child(3) :nth-child(4) {
+  animation-delay: 9s;
+  animation-name: fadein;
+}
+.section__menu div.listblockmenu:nth-child(3) :nth-child(5) {
+  animation-delay: 10s;
+  animation-name: fadein;
+}
+.section__menu div.listblockmenu:nth-child(4) :nth-child(1) {
+  animation-delay: 11s;
+  animation-name: fadein;
+}
+.section__menu div.listblockmenu:nth-child(4) :nth-child(2) {
+  animation-delay: 12s;
+  animation-name: fadein;
+}
+.section__menu div.listblockmenu:nth-child(4) :nth-child(3) {
+  animation-delay: 13s;
+  animation-name: fadein;
+}
+.section__menu div.listblockmenu:nth-child(4) :nth-child(4) {
+  animation-delay: 14s;
+  animation-name: fadein;
+}
+.section__menu div.listblockmenu:nth-child(4) :nth-child(5) {
+  animation-delay: 15s;
+  animation-name: fadein;
+}
+.section__menu .elements6 :nth-child(1) {
+  animation-delay: 1s;
+  animation-name: fadein;
+}
+.section__menu .elements6 :nth-child(2) {
+  animation-delay: 2s;
+  animation-name: fadein;
+}
+.section__menu .elements6 :nth-child(3) {
+  animation-delay: 3s;
+  animation-name: fadein;
+}
+.section__menu .elements6 :nth-child(4) {
+  animation-delay: 4s;
+  animation-name: fadein;
+}
+.section__menu .elements6 :nth-child(5) {
+  animation-delay: 5s;
+  animation-name: fadein;
+}
+.section__menu .elements6 :nth-child(6) {
+  animation-delay: 6s;
+  animation-name: fadein;
+}
+.section__menu .elements6 ~ div.listblockmenu:nth-child(3) :nth-child(1) {
+  animation-delay: 7s;
+  animation-name: fadein;
+}
+.section__menu .elements6 ~ div.listblockmenu:nth-child(3) :nth-child(2) {
+  animation-delay: 8s;
+  animation-name: fadein;
+}
+.section__menu .elements6 ~ div.listblockmenu:nth-child(3) :nth-child(3) {
+  animation-delay: 9s;
+  animation-name: fadein;
+}
+.section__menu .elements6 ~ div.listblockmenu:nth-child(3) :nth-child(4) {
+  animation-delay: 10s;
+  animation-name: fadein;
+}
+.section__menu .elements6 ~ div.listblockmenu:nth-child(3) :nth-child(5) {
+  animation-delay: 11s;
+  animation-name: fadein;
+}
+.section__menu .elements6 ~ div.listblockmenu:nth-child(4) :nth-child(1) {
+  animation-delay: 12s;
+  animation-name: fadein;
+}
+.section__menu .elements6 ~ div.listblockmenu:nth-child(4) :nth-child(2) {
+  animation-delay: 13s;
+  animation-name: fadein;
+}
+.section__menu .elements6 ~ div.listblockmenu:nth-child(4) :nth-child(3) {
+  animation-delay: 14s;
+  animation-name: fadein;
+}
+.section__menu .elements6 ~ div.listblockmenu:nth-child(4) :nth-child(4) {
+  animation-delay: 15s;
+  animation-name: fadein;
+}
+.section__menu .elements6 ~ div.listblockmenu:nth-child(4) :nth-child(5) {
+  animation-delay: 16s;
+  animation-name: fadein;
 }
 
 .section__div--titre {
