@@ -650,6 +650,10 @@ main img {
 }
 
 @media all and (min-width: 768px) {
+  main img {
+    height: 300px;
+  }
+
   #sectionrestaurant #sectionrestaurant__container {
     display: flex;
     justify-content: space-around;
@@ -689,6 +693,10 @@ main img {
     display: flex !important;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+
+  main img {
+    height: 400px;
   }
 
   #sectionrestaurant {
