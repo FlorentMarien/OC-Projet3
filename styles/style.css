@@ -131,7 +131,7 @@ footer ul li a {
 .logo--heartanim {
   /* Heart anim */
   position: relative;
-  width: 20px;
+  width: 40px;
   height: 100%;
 }
 .logo--heartanim i {
