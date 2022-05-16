@@ -18,7 +18,8 @@
     height: 1px;
     background: linear-gradient(45deg,$couleurprimaire,$couleursecondaire);
     margin: 15px;
-    animation: loadspinner 1s linear infinite;
+    animation: loadspinner 1s linear 5;
+    
 } 
 @for $var from  1 through 8 {
     .wave:nth-child(#{$var}){
@@ -251,7 +252,6 @@ main img{
         animation-timing-function: ease-in-out;
     }
     
-    $max:6;
     /* Fade in restaurant 6 Elements 3 Menu*/
     div.listblockmenu{
         $compteurelement:0;
@@ -348,7 +348,7 @@ main img{
         width: 0px;
         padding:0;
         transition-property: width;
-        transition-duration: 1s;
+        transition-duration: 0.5s;
         transition-timing-function: ease-in-out;
         background-color: $couleurtertiaire;
         
@@ -358,7 +358,7 @@ main img{
         align-items: center;
         i{
             color: white;
-            transition:transform ease-in-out 1s
+            transition:transform ease-in-out 0.5s
         }
     }
     &:hover{

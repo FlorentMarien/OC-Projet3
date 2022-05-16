@@ -136,7 +136,7 @@ footer ul li a {
 }
 .logo--heartanim i {
   transition-property: opacity;
-  transition-duration: 1.5s;
+  transition-duration: 0.5s;
   transition-timing-function: linear;
   position: absolute;
   width: 100%;
@@ -181,7 +181,7 @@ footer ul li a {
   height: 1px;
   background: linear-gradient(45deg, #9356DC, #FF79DA);
   margin: 15px;
-  animation: loadspinner 1s linear infinite;
+  animation: loadspinner 1s linear 5;
 }
 
 .wave:nth-child(1) {
@@ -443,132 +443,132 @@ main img {
   /* Fade in restaurant 6 Elements 3 Menu*/
 }
 .section__menu :nth-child(n) {
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
 }
 .section__menu div.listblockmenu:nth-child(2) :nth-child(1) {
-  animation-delay: 1s;
+  animation-delay: 0.1s;
   animation-name: fadein;
 }
 .section__menu div.listblockmenu:nth-child(2) :nth-child(2) {
-  animation-delay: 2s;
+  animation-delay: 0.2s;
   animation-name: fadein;
 }
 .section__menu div.listblockmenu:nth-child(2) :nth-child(3) {
-  animation-delay: 3s;
+  animation-delay: 0.3s;
   animation-name: fadein;
 }
 .section__menu div.listblockmenu:nth-child(2) :nth-child(4) {
-  animation-delay: 4s;
+  animation-delay: 0.4s;
   animation-name: fadein;
 }
 .section__menu div.listblockmenu:nth-child(2) :nth-child(5) {
-  animation-delay: 5s;
+  animation-delay: 0.5s;
   animation-name: fadein;
 }
 .section__menu div.listblockmenu:nth-child(3) :nth-child(1) {
-  animation-delay: 6s;
+  animation-delay: 0.6s;
   animation-name: fadein;
 }
 .section__menu div.listblockmenu:nth-child(3) :nth-child(2) {
-  animation-delay: 7s;
+  animation-delay: 0.7s;
   animation-name: fadein;
 }
 .section__menu div.listblockmenu:nth-child(3) :nth-child(3) {
-  animation-delay: 8s;
+  animation-delay: 0.8s;
   animation-name: fadein;
 }
 .section__menu div.listblockmenu:nth-child(3) :nth-child(4) {
-  animation-delay: 9s;
+  animation-delay: 0.9s;
   animation-name: fadein;
 }
 .section__menu div.listblockmenu:nth-child(3) :nth-child(5) {
-  animation-delay: 10s;
-  animation-name: fadein;
-}
-.section__menu div.listblockmenu:nth-child(4) :nth-child(1) {
-  animation-delay: 11s;
-  animation-name: fadein;
-}
-.section__menu div.listblockmenu:nth-child(4) :nth-child(2) {
-  animation-delay: 12s;
-  animation-name: fadein;
-}
-.section__menu div.listblockmenu:nth-child(4) :nth-child(3) {
-  animation-delay: 13s;
-  animation-name: fadein;
-}
-.section__menu div.listblockmenu:nth-child(4) :nth-child(4) {
-  animation-delay: 14s;
-  animation-name: fadein;
-}
-.section__menu div.listblockmenu:nth-child(4) :nth-child(5) {
-  animation-delay: 15s;
-  animation-name: fadein;
-}
-.section__menu .elements6 :nth-child(1) {
   animation-delay: 1s;
   animation-name: fadein;
 }
+.section__menu div.listblockmenu:nth-child(4) :nth-child(1) {
+  animation-delay: 1.1s;
+  animation-name: fadein;
+}
+.section__menu div.listblockmenu:nth-child(4) :nth-child(2) {
+  animation-delay: 1.2s;
+  animation-name: fadein;
+}
+.section__menu div.listblockmenu:nth-child(4) :nth-child(3) {
+  animation-delay: 1.3s;
+  animation-name: fadein;
+}
+.section__menu div.listblockmenu:nth-child(4) :nth-child(4) {
+  animation-delay: 1.4s;
+  animation-name: fadein;
+}
+.section__menu div.listblockmenu:nth-child(4) :nth-child(5) {
+  animation-delay: 1.5s;
+  animation-name: fadein;
+}
+.section__menu .elements6 :nth-child(1) {
+  animation-delay: 0.1s;
+  animation-name: fadein;
+}
 .section__menu .elements6 :nth-child(2) {
-  animation-delay: 2s;
+  animation-delay: 0.2s;
   animation-name: fadein;
 }
 .section__menu .elements6 :nth-child(3) {
-  animation-delay: 3s;
+  animation-delay: 0.3s;
   animation-name: fadein;
 }
 .section__menu .elements6 :nth-child(4) {
-  animation-delay: 4s;
+  animation-delay: 0.4s;
   animation-name: fadein;
 }
 .section__menu .elements6 :nth-child(5) {
-  animation-delay: 5s;
+  animation-delay: 0.5s;
   animation-name: fadein;
 }
 .section__menu .elements6 :nth-child(6) {
-  animation-delay: 6s;
+  animation-delay: 0.6s;
   animation-name: fadein;
 }
 .section__menu .elements6 ~ div.listblockmenu:nth-child(3) :nth-child(1) {
-  animation-delay: 7s;
+  animation-delay: 0.7s;
   animation-name: fadein;
 }
 .section__menu .elements6 ~ div.listblockmenu:nth-child(3) :nth-child(2) {
-  animation-delay: 8s;
+  animation-delay: 0.8s;
   animation-name: fadein;
 }
 .section__menu .elements6 ~ div.listblockmenu:nth-child(3) :nth-child(3) {
-  animation-delay: 9s;
+  animation-delay: 0.9s;
   animation-name: fadein;
 }
 .section__menu .elements6 ~ div.listblockmenu:nth-child(3) :nth-child(4) {
-  animation-delay: 10s;
+  animation-delay: 1s;
   animation-name: fadein;
 }
 .section__menu .elements6 ~ div.listblockmenu:nth-child(3) :nth-child(5) {
-  animation-delay: 11s;
+  animation-delay: 1.1s;
   animation-name: fadein;
 }
 .section__menu .elements6 ~ div.listblockmenu:nth-child(4) :nth-child(1) {
-  animation-delay: 12s;
+  animation-delay: 1.2s;
   animation-name: fadein;
 }
 .section__menu .elements6 ~ div.listblockmenu:nth-child(4) :nth-child(2) {
-  animation-delay: 13s;
+  animation-delay: 1.3s;
   animation-name: fadein;
 }
 .section__menu .elements6 ~ div.listblockmenu:nth-child(4) :nth-child(3) {
-  animation-delay: 14s;
+  animation-delay: 1.4s;
   animation-name: fadein;
 }
 .section__menu .elements6 ~ div.listblockmenu:nth-child(4) :nth-child(4) {
-  animation-delay: 15s;
+  animation-delay: 1.5s;
   animation-name: fadein;
 }
 .section__menu .elements6 ~ div.listblockmenu:nth-child(4) :nth-child(5) {
-  animation-delay: 16s;
+  animation-delay: 1.6s;
   animation-name: fadein;
 }
 
@@ -630,7 +630,7 @@ main img {
   width: 0px;
   padding: 0;
   transition-property: width;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
   background-color: #99E2D0;
   cursor: pointer;
@@ -640,7 +640,7 @@ main img {
 }
 .blockmenu .blockmenu--addanimationpanier i {
   color: white;
-  transition: transform ease-in-out 1s;
+  transition: transform ease-in-out 0.5s;
 }
 .blockmenu:hover .blockmenu--addanimationpanier {
   width: 25%;
